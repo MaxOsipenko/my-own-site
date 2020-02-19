@@ -20,6 +20,7 @@ body {
 .page-header {
   margin: 0 0 160px;
   padding: 32px 0 32px;
+
 }
 
 .page-header .container,
@@ -159,6 +160,7 @@ body {
 }
 
 .button {
+  margin-bottom: 20px; 
   padding: 6px 20px;
   display: inline-block;
   vertical-align: baseline;
