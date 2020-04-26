@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Regular'), local('RobotoRegular'), local('Roboto Regular');
+    src: url('Roboto/Roboto-Regular-webfont.eot');
+    src: url('Roboto/Roboto-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto/Roboto-Regular-webfont.woff') format('woff'),
+         url('Roboto/Roboto-Regular-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto-Bold'), local('RobotoBold'), local('Roboto Bold');
+    src: url('Roboto/roboto_bold/Roboto-Bold-webfont.eot');
+    src: url('Roboto/roboto_bold/Roboto-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('Roboto/roboto_bold/Roboto-Bold-webfont.woff') format('woff'),
+         url('Roboto/roboto_bold/Roboto-Bold-webfont.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+html {
+  background: #E5E5E5;
+}
+body {
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  width: 1440px;
+  height: 2047px;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  color: black;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  
+  text-align: center;
+}
+
+header, main, footer {
+  width: 100%;
+}
+
+.main-header {
+  height: 218px;
+}
+
+.site-header {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 35px;
+  line-height: 47px;
+  letter-spacing: 1px;
+  margin: 60px auto 46px;
+  height: 47px;
+}
+
+.site-menu {
+  width: 100%;
+}
+
+.site-menu ul {
+  list-style: none;
+  margin: 0 134px 0 135px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  height: 18px;
+}
+
+.site-menu li {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  height: 18px;
+  vertical-align: middle;
+}
+
+.site-menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.site-footer .site-menu a {
+  color: white;
+}
+
+.site-menu a:hover {
+  color: gold;
+}
+
+.underwater-hotel {
+  width: 100%;
+  height: 464px;
+  background: rgb(47, 13, 87) url("images/underwater_hotel.jpg");
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.underwater-hotel > * {
+  margin: 0;
+}
+
+.underwater-hotel a {
+  margin-top: 46px;
+  height: 55px;
+  color: white;
+}
+
+.underwater-hotel a:hover {
+  transform: scale(1.2);
+}
+
+.underwater-hotel h2 {
+  font-size: 72px;
+  line-height: 84px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 32px;
+  margin-bottom: auto;
+  height: 80px;
+}
+
+.underwater-hotel p {
+  height: 64px;
+  font-size: 14px;
+  line-height: 150%;
+  margin-bottom: 48px;
+}
+
+.review {
+  width: 100%;
+  height: 463px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: flex-start;
+  flex-wrap: wrap; 
+}
+
+.review > * {
+  margin: 0;
+  width: 370px;
+  height: 326px;
+  text-align: left; 
+}
+
+.review-header,
+.season_tickets-header {
+  width: 100%;
+  height: 20px;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: center;
+} 
+ 
+.review-header {
+  margin: 44px auto 20px;
+}
+
+.review article h3,
+.circle .advantage h3 {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 23px;
+  line-height: 31px;
+  height: 31px;
+  margin: 0;
+  margin-top: 223px;
+}
+
+.review article p,
+.circle .advantage p {
+  width: 100%;
+  height: 63px;
+  font-size: 14px;
+  line-height: 150%;
+  font-weight: normal;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.review .review-art p {
+  margin-top: 11px;
+}
+
+.review .review-literature p {
+  height: 64px;
+}
+
+.review .review-theatre p {
+  height: 62px;
+}
+
+.review article a {
+  text-decoration: none;
+  color: black;
+}
+
+.review .review-literature a {
+  color: #FF7931;
+}
+
+.review article a:hover {
+  text-decoration: underline;
+  color: red;
+}
+
+.review-art {
+  background: url('images/art.jpg') no-repeat 0 top;
+}
+
+.review-literature {
+  background: url('images/literature.png') no-repeat 0 top;
+  margin: 0 29px;
+}
+
+.review-theatre {
+  background: url('images/theatre.jpg') no-repeat 0 top;
+}
+
+.season_tickets {
+  height: 556px;
+  background-color: #F7F7F7;
+  display: flex;
+  overflow: hidden;
+}
+
+.circle {
+  width: 707px;
+  height: 707px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  margin: -75px auto 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.season_tickets-header {
+  margin: 108px 0 35px;
+}
+
+.circle .advantage {
+  margin: 0;
+  margin-bottom: 24px;
+  width: 368px;
+  height: 104px;
+}
+
+.circle .advantage:nth-of-type(3) {
+  margin-bottom: 25px;
+}
+
+.circle .advantage h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  
+}
+.circle .advantage p {
+  margin: 0;
+}
+
+.circle .button {
+  height: 47px;
+}
+
+.circle .button a {
+  display: inline-block;
+  height: 47px;
+  transition: transform .5s linear;
+}
+
+.circle .button a:hover {
+  transform: rotate(360deg);
+}
+
+.site-footer {
+  height: 295px;
+  margin-top: 50px;
+  background-color: #575757;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-header {
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 28px;
+  line-height: 37px;
+  letter-spacing: 1px;
+  margin: 26px auto 32px;
+  height: 38px;
+}
+
+.site-footer .block {
+  width: 1170px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  margin-top: 46px;
+}
+
+.social {
+  font-size: 0;
+}
+
+.social a {
+  display: inline-block;
+  position: relative;
+  width: 47px;
+  height: 47px;
+  vertical-align: middle;
+  margin-top: 42px;
+  background-color: white;
+}
+
+.social a.facebook {
+  margin-right: 14px;
+  margin-left: 14px;
+}
+
+.social img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} 
+
+.social a:hover {
+  background-color: #ffff00;
+}
