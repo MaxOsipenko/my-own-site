@@ -24,10 +24,12 @@ html {
 }
 body {
   position: relative;
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
-  width: 1440px;
+  width: 100%;
   height: 2047px;
+  min-width: 1440px;
+  min-height: 100vh;
   font-family: 'Roboto', 'Arial', sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -37,14 +39,31 @@ body {
   flex-direction: column;
   align-items: center;  
   text-align: center;
-}
+}  
 
 header, main, footer {
   width: 100%;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .main-header {
-  height: 218px;
+  min-height: 218px;
+  padding-bottom: 47px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;/* здесь и далее для Firefox*/
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .site-header {
@@ -96,16 +115,14 @@ header, main, footer {
 
 .underwater-hotel {
   width: 100%;
-  height: 464px;
-  background: rgb(47, 13, 87) url("images/underwater_hotel.jpg");
+  min-height: 464px;
   color: white;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.underwater-hotel > * {
-  margin: 0;
+.underwater-hotel .container {
+  background: rgb(47, 13, 87) url("images/underwater_hotel.jpg") no-repeat;
+  min-height: 464px;/*пришлось прописать размер явно из-за проблем с отображением в IE*/
 }
 
 .underwater-hotel a {
@@ -130,27 +147,41 @@ header, main, footer {
 }
 
 .underwater-hotel p {
-  height: 64px;
+  min-height: 64px;
   font-size: 14px;
   line-height: 150%;
+  margin: 0;
   margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.first_line {
+  margin-bottom: 5px;
 }
 
 .review {
   width: 100%;
-  height: 463px;
+  min-height: 463px;
+  display: flex;
+}
+
+.review .container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap; 
 }
 
-.review > * {
+.review .container > article {
   margin: 0;
   width: 370px;
-  height: 326px;
-  text-align: left; 
+  min-height: 326px;
+  text-align: left;
+   
 }
 
 .review-header,
@@ -176,15 +207,21 @@ header, main, footer {
   font-weight: 900;
   font-size: 23px;
   line-height: 31px;
+  width: 368px;
   height: 31px;
   margin: 0;
   margin-top: 223px;
 }
 
+.review article.review-literature h3,
+.review article.review-theatre h3 {
+  width: 367px;
+}
+
 .review article p,
 .circle .advantage p {
   width: 100%;
-  height: 63px;
+  min-height: 63px;
   font-size: 14px;
   line-height: 150%;
   font-weight: normal;
@@ -197,11 +234,11 @@ header, main, footer {
 }
 
 .review .review-literature p {
-  height: 64px;
+  min-height: 64px;
 }
 
 .review .review-theatre p {
-  height: 62px;
+  min-height: 62px;
 }
 
 .review article a {
@@ -222,7 +259,7 @@ header, main, footer {
   background: url('images/art.jpg') no-repeat 0 top;
 }
 
-.review-literature {
+.review .container .review-literature {
   background: url('images/literature.png') no-repeat 0 top;
   margin: 0 29px;
 }
@@ -232,18 +269,28 @@ header, main, footer {
 }
 
 .season_tickets {
-  height: 556px;
+  width: 100%;
+  min-height: 556px;
+  margin-bottom: 50px;
   background-color: #F7F7F7;
+  display: flex;
+}
+
+.season_tickets .container {
   display: flex;
   overflow: hidden;
 }
 
 .circle {
   width: 707px;
-  height: 707px;
+  min-height: 707px;
+  margin-top: -75px;
+  margin-bottom: -75px;
+  padding-bottom: 111px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   border-radius: 50%;
   background-color: #ffffff;
-  margin: -75px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,8 +303,8 @@ header, main, footer {
 .circle .advantage {
   margin: 0;
   margin-bottom: 24px;
-  width: 368px;
-  height: 104px;
+  width: 370px;
+  min-height: 104px;
 }
 
 .circle .advantage:nth-of-type(3) {
@@ -265,10 +312,9 @@ header, main, footer {
 }
 
 .circle .advantage h3 {
-  margin: 0;
-  margin-bottom: 10px;
-  
+  margin: 0 auto 10px;
 }
+
 .circle .advantage p {
   margin: 0;
 }
@@ -288,13 +334,13 @@ header, main, footer {
 }
 
 .site-footer {
-  height: 295px;
-  margin-top: 50px;
+  min-height: 295px;
+  margin-top: auto;
+  padding-bottom: 44px;
   background-color: #575757;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
 }
 
 .footer-header {
@@ -310,7 +356,8 @@ header, main, footer {
 
 .site-footer .block {
   width: 1170px;
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  min-height: 0px;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
   margin-top: 46px;
 }
 
@@ -343,3 +390,4 @@ header, main, footer {
 .social a:hover {
   background-color: #ffff00;
 }
+
