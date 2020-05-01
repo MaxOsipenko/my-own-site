@@ -79,6 +79,7 @@ main {
 
 .site-menu {
   width: 100%;
+  position: relative;
 }
 
 .site-menu ul {
@@ -181,6 +182,7 @@ main {
   width: 370px;
   min-height: 326px;
   text-align: left;
+   
 }
 
 .review-header,
@@ -300,10 +302,25 @@ main {
 }
 
 .circle .advantage {
+  position: relative;
   margin: 0;
   margin-bottom: 24px;
   width: 370px;
   min-height: 104px;
+}
+
+.circle .advantage:not(:nth-of-type(3))::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  bottom: 0;
+  left: 50%;
+  width: 100px;
+  height: 0;
+  opacity: 0.4;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  transform: rotate(0.1deg)  translateX(-50%);
 }
 
 .circle .advantage:nth-of-type(3) {
@@ -353,15 +370,23 @@ main {
   height: 38px;
 }
 
-.site-footer .block {
+.site-footer .site-menu::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
   width: 1170px;
-  min-height: 0px;
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
-  margin-top: 46px;
+  bottom: -46px;
+  left: 50%;
+  transform: translateX(-50%);  
+  height: 0;
+  opacity: 0.4;
+  border-top: 1px solid #FFFFFF;
 }
 
 .social {
   font-size: 0;
+  margin-top: 88px;
 }
 
 .social a {
@@ -370,7 +395,6 @@ main {
   width: 47px;
   height: 47px;
   vertical-align: middle;
-  margin-top: 42px;
   background-color: white;
 }
 
